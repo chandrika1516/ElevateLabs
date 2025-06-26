@@ -1,7 +1,7 @@
 # 📊 ElevateLabs - Task 3: Linear Regression
 
-**Author:** Rohith S D  
-**Repository:** [Rohith0750/ElevateLabs](https://github.com/Rohith0750/ElevateLabs)  
+**Author:** Chandrika P V  
+**Repository:** [chandrika1516/ElevateLabs](https://github.com/chandrika1516/ElevateLabs)  
 
 ---
 
@@ -91,7 +91,7 @@ bedrooms: -51234.56
 ---
 
 ## 🧑‍💻 Author
-**Rohith S D** — [GitHub Profile](https://github.com/Rohith0750)
+**chandrika P V* — [GitHub Profile](https://github.com/chandrika1516)
 
 ---
 
