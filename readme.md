@@ -1,103 +1,139 @@
-# 📊 ElevateLabs - Task 3: Linear Regression
+# 🧠 Logistic Regression - Breast Cancer Classification
 
-**Author:** Chandrika P V  
-**Repository:** [chandrika1516/ElevateLabs](https://github.com/chandrika1516/ElevateLabs)  
+This project is a part of the AI & ML Internship Task 4: **Classification using Logistic Regression**.
 
----
-
-## 🎯 Objective
-This project implements **Linear Regression** with `scikit-learn`.  
-It covers:
-- Loading and preprocessing `Housing.csv`
-- Training and testing a regression model
-- Evaluating model performance with MAE, MSE, R²
-- Plotting regression fits and interpreting coefficients
+## 📌 Objective
+Build a binary classifier using **Logistic Regression** to predict whether a tumor is **malignant (M)** or **benign (B)** using the Breast Cancer Wisconsin dataset.
 
 ---
 
-## 🧠 What You'll Learn
-✅ Train/test splits with `scikit-learn`  
-✅ Fit a `LinearRegression` model  
-✅ Assess model with MAE, MSE, R²  
-✅ Encode categorical variables  
-✅ Plot actual vs. predicted prices  
+## 📁 Dataset
+
+- Dataset used: **Breast Cancer Wisconsin (Diagnostic) Dataset**
+- Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
+- Format: CSV with 32 columns including ID, diagnosis, and various features.
 
 ---
 
-## 🛠️ Tech Stack
-| Badge |
-|--------|
-| ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python) |
-| ![Pandas](https://img.shields.io/badge/Pandas-Dataframe-150458?logo=pandas) |
-| ![NumPy](https://img.shields.io/badge/NumPy-Arrays-013243?logo=numpy) |
-| ![Matplotlib](https://img.shields.io/badge/Matplotlib-Plotting-11557C?logo=plotly) |
-| ![Scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikit-learn) |
+## 🛠 Tech Stack Used
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
+  <img src="https://img.shields.io/badge/Matplotlib-206b8f?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+  <img src="https://img.shields.io/badge/Seaborn-6A5ACD?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" />
+</p>
 
 ---
 
-## 📂 Dataset
-| Column             | Description                                |
-|--------------------|--------------------------------------------|
-| price              | Target — price of the house               |
-| area               | Total area of the house                    |
-| bedrooms          | Number of bedrooms                         |
-| bathrooms         | Number of bathrooms                        |
-| stories            | Number of stories                         |
-| mainroad           | Whether on the main road                 |
-| guestroom          | Whether the house has a guestroom         |
-| basement           | Whether the house has a basement          |
-| hotwaterheating    | Hot water heating available?             |
-| airconditioning    | Air conditioning installed?               |
-| parking            | Number of parking spots                  |
-| prefarea           | Preferred area?                          |
-| furnishingstatus   | Furnishing status                        |
+## 🔍 Steps Followed
+
+1. **Data Loading**  
+   Loaded the dataset from CSV and converted the diagnosis label to binary (M → 1, B → 0).
+
+2. **Data Preprocessing**
+   - Dropped ID column
+   - Feature scaling with `StandardScaler`
+   - Train/test split (80/20)
+
+3. **Model Training**
+   - Used `LogisticRegression` from Scikit-learn
+
+4. **Evaluation Metrics**
+   - Confusion Matrix
+   - Classification Report (Precision, Recall, F1-score)
+   - ROC Curve and AUC Score
+
+5. **Threshold Tuning**
+   - Demonstrated prediction change using different probability thresholds
+
+6. **Sigmoid Function**
+   - Plotted sigmoid curve to show probability mapping in logistic regression
 
 ---
 
-## 🚀 Steps Implemented
-1. Load data with `pd.read_csv()`
-2. Convert categorical columns into dummy variables
-3. Split into training & testing sets
-4. Fit a `LinearRegression` model
-5. Evaluate using MAE, MSE, R²
-6. Interpret coefficients
-7. Visualize area vs price regression fit
+## 📈 Results
+
+| Metric            | Value         |
+|------------------|---------------|
+| Accuracy          | ~96%          |
+| Precision         | High          |
+| Recall            | High          |
+| ROC-AUC Score     | ~0.99         |
+
+> Note: Exact values depend on the random train-test split.
 
 ---
 
-## 📈 Sample Output
-MAE: 526312.45
-MSE: 1.23e+12
-R² Score: 0.89
+## 📊 Visuals
 
-=== Coefficients ===
-Intercept: 1234567.89
-area: 2123.45
-bedrooms: -51234.56
+- Confusion Matrix  
+- ROC Curve  
+- Sigmoid Function Plot  
+
+All visuals are generated using `matplotlib` and `seaborn`.
+
+---
+
+## 🗂 File Structure
+
+├── data.csv # Dataset file
+├── task_4.py # Python script for training & evaluation
+├── README.md # This file
 
 
 ---
 
-## 🎯 Interview Prep
-| Question                                          | Answer                                                                 |
-|----------------------------------------------------|-------------------------------------------------------------------------|
-| What assumptions does linear regression make?     | Linearity, independence of errors, homoscedasticity, no multicollinearity, errors normally distributed. |
-| What is the R² score and its significance?         | Proportion of variance explained by the model — closer to 1 is better. |
-| MAE vs MSE — when to prefer one?                    | MAE is robust to outliers; MSE penalizes larger errors more.          |
-| What is multicollinearity?                         | High correlation between independent variables.                        |
-| Difference between simple and multiple regression? | 1 feature vs multiple features.                                        |
-| Can linear regression be used for classification?  | No — use logistic regression for classification tasks.                 |
+## 📝 How to Run
+
+1. Clone this repo or download the files.
+2. Make sure Python is installed with required libraries:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn
+
+# run task_4.py
+
+
 
 ---
 
-## 🧑‍💻 Author
-**chandrika P V* — [GitHub Profile](https://github.com/chandrika1516)
+Let me know if you'd like:
+- The README customized further (e.g., with screenshots or GitHub badges).
+- A version in Jupyter Notebook format.
+- Help deploying it on GitHub.
 
----
 
-## 📜 License
-This project is licensed under the MIT License.
+🤝 Contributing
+Feel free to:
 
----
+🍴 Fork this repo
 
-# 💡 _Happy Coding & Learning!_
+📢 Submit Pull Requests
+
+⭐ Star the project if you find it helpful!
+
+💡 References & Resources
+Kaggle Titanic Tutorial
+
+Pandas Docs
+
+Scikit-learn Preprocessing Docs
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Happy Learning! 🎉
+(Created by Rohith S D)
+
+
+
+🎯 ✅ *Next Steps*:
+- Copy this into your README.md.
+
+💡 Would you also like me to help you generate a requirements.txt file? Let me know!
+
+# 💖 Thanks for checking this out!
+If you find this helpful, don’t forget to give it a ⭐ on GitHub.
+
