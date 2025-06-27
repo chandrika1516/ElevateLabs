@@ -125,7 +125,7 @@ Scikit-learn Preprocessing Docs
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 Happy Learning! 🎉
-(Created by Rohith S D)
+(Created by CHANDRIKA P V)
 
 
 
